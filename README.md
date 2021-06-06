@@ -232,7 +232,7 @@ db.student.find().forEach(function(student) {
 | db.createCollection("student"); | Creating a Collection student |
 | show collections | Shows all Collection of current connected Database |
 | db.student.drop() | Deletes the Collection of current connected Database |
-| insert | --- |
+| insert | |
 | db.student.insert(student); | Creating a Collection student with an existing JavaScript Object |
 | db.student.insertMany(students); | Creating a Collection student with many existing JavaScript Objects |
 | find | --- |
@@ -242,13 +242,13 @@ db.student.find().forEach(function(student) {
 | db.student.find({firstName: 'Michael', {firstName: 0, lastName: 1}}).pretty(); | Searchs all Documents with firstName as Query and displays Lastname (and excludes Firstname) of Results |
 | db.student.find({totalSpentInBooks: {$gt: 12}}, {lastName: 1}).pretty(); | Searchs all Documents where totalSpentInBooks is greater than ($gt) 12 and displays their Lastname |
 | db.student.find({favouriteSubjects: {$all: ["maths"]}}, {}).count(); | Counts all Documents where favouriteSubjects is "maths" and displays the Number |
-| update | --- |
+| update | |
 | db.student.update({_id: ObjectId("60bb64fd9e82a72a313df8cc")}, {$set: {firstName: 'Michael'}}); | Update the Document with the ObjectId |
 | db.student.update({_id: ObjectId("60bb64fd9e82a72a313df8cc")}, {$unset: {firstName: 1}}); | Set to Default the Attribute firstName in the Document with ObjectId |
 | db.student.update({_id: ObjectId("60bb64fd9e82a72a313df8cc")}, {$inc: {totalSpentInBooks: 101}}); | Increment (42+101) the Attribut totalSpentInBooks in the Document with ObjectId |
 | db.student.update({_id: ObjectId("60bb64fd9e82a72a313df8cc")}, {$pull: {favouriteSubjects: 'maths'}}); | Pull out the Value 'maths' from Attribute favouriteSubjects in the Document with ObjectId |
 | db.student.update({_id: ObjectId("60bb64fd9e82a72a313df8cc")}, {$push: {favouriteSubjects: 'maths'}}); | Push the Value 'maths' into Attribute favouriteSubjects in the Document with ObjectId |
-| delete | --- |
+| delete | |
 | db.student.deleteOne({_id: ObjectId("60bb64fd9e82a72a313df8cc")}); | Deletes the Document with ObjectId |
 | db.student.deleteMany({gender: 'M')}); | Deletes all Documents with Attrbiute gender 'M' |
 

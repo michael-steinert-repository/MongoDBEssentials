@@ -3,7 +3,7 @@ const MongoClient = require('mongodb').MongoClient;
 const username = "michael";
 const cluster = "cluster0";
 const database = "student";
-const password = "bobo1994";
+const password = "xxx";
 const db = "student"
 const collections = {
   student: "student",
