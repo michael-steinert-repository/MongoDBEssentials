@@ -235,7 +235,7 @@ db.student.find().forEach(function(student) {
 | insert | |
 | db.student.insert(student); | Creating a Collection student with an existing JavaScript Object |
 | db.student.insertMany(students); | Creating a Collection student with many existing JavaScript Objects |
-| find | --- |
+| find | |
 | db.student.find() | Searchs all Documents in the Collection of current connected Database |
 | db.student.find().limit(3).skip(1); | Searchs all Documents in the Collection and skips the first Document and shows in Total three Documents |
 | db.student.find().sort({firstName: 1}); | Searchs all Documents in the Collection and sort in ascending Ordner |
